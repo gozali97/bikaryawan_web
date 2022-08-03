@@ -25,17 +25,9 @@ class LaporanGaji extends CI_Controller
 	public function cetak()
 	{
 		$data['title'] = "Cetak Laporan Gaji Karyawan";
-		if ((isset($_GET['bulan']) && $_GET['bulan'] != '') && (isset(
-			$_GET['tahun']
-		) && $_GET['tahun'] != '')) {
-			$bulan = $_GET['bulan'];
-			$tahun = $_GET['tahun'];
-			$bulantahun = $bulan . $tahun;
-		} else {
-			$bulan = date('m');
-			$tahun = date('Y');
-			$bulantahun = $bulan . $tahun;
-		}
+		$bulan = $this->input->post('bulan');
+		$tahun = $this->input->post('tahun');
+		$bulantahun = $bulan . $tahun;
 		$data['c_pot'] = $this->PendataanModel->get_data('tb_potongan_gaji')->result();
 		$data['c_gaji'] = $this->db->query("SELECT tb_karyawan.nik, tb_karyawan.nama_karyawan, tb_karyawan.jenis_kelamin,
 		tb_divisi.nama_divisi, tb_divisi.gaji_pokok, tb_divisi.uang_makan, tb_kehadiran.alpha

@@ -26,17 +26,8 @@ class LaporanAbsensi extends CI_Controller
 	public function cetak()
 	{
 		$data['title'] = "Cetak Laporan Absensi Karyawan";
-		if ((isset($_GET['bulan']) && $_GET['bulan'] != '') && (isset(
-			$_GET['tahun']
-		) && $_GET['tahun'] != '')) {
-			$bulan = $_GET['bulan'];
-			$tahun = $_GET['tahun'];
-			$bulantahun = $bulan . $tahun;
-		} else {
-			$bulan = date('m');
-			$tahun = date('Y');
-			$bulantahun = $bulan . $tahun;
-		}
+		$bulan = $this->input->post('bulan');
+		$tahun = $this->input->post('tahun');
 		$bulantahun = $bulan . $tahun;
 		$data['lap_absen'] = $this->db->query("SELECT * FROM tb_kehadiran
 		WHERE bulan='$bulantahun'
