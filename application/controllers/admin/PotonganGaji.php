@@ -16,7 +16,7 @@ class PotonganGaji extends CI_Controller
 
 	public function index()
 	{
-		$data['title'] = "Set Potongan Gaji";
+		$data['title'] = "Data Potongan Gaji";
 		$data['pot_gaji'] = $this->PendataanModel->get_data('tb_potongan_gaji')->result();
 		$this->load->view('template_admin/header', $data);
 		$this->load->view('template_admin/sidebar');

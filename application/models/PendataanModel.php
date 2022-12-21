@@ -42,4 +42,9 @@ class PendataanModel extends CI_Model
 			return FALSE;
 		}
 	}
+
+	function get_alpha()
+	{
+		return $this->db->query("SELECT jml_potongan FROM tb_potongan_gaji WHERE jenis_potongan = 'alpha'");
+	}
 }

@@ -16,9 +16,9 @@
 					</div><!-- /.col -->
 					<div class="col-12">
 						<div class="card">
-							<div class="card-header">
-								<a class="btn btn-sm btn-success" href="<?= base_url('admin/potongangaji/tambah_data') ?>"><i class="fas fa-plus">Tambah Data</i></a>
-							</div>
+							<!-- <div class="card-header"> -->
+							<!-- <a class="btn btn-sm btn-success" href="<?= base_url('admin/potongangaji/tambah_data') ?>"><i class="fas fa-plus">Tambah Data</i></a> -->
+							<!-- </div> -->
 							<!-- /.card-header -->
 							<div class="card-body">
 								<?= $this->session->flashdata('pesan')  ?>

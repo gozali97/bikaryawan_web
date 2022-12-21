@@ -30,7 +30,9 @@ class DataGaji extends CI_Controller
 			$tahun = date('Y');
 			$bulantahun = $bulan . $tahun;
 		}
-		$data['pot'] = $this->PendataanModel->get_data('tb_potongan_gaji')->result();
+		// $data['pot'] = $this->PendataanModel->get_data('tb_potongan_gaji')->result();
+		$data['pot'] = $this->PendataanModel->get_alpha()->result();
+		// var_dump($data['pot']);
 		$data['gaji'] = $this->db->query("SELECT tb_karyawan.nik, tb_karyawan.nama_karyawan, tb_karyawan.jenis_kelamin,
 		tb_divisi.nama_divisi, tb_divisi.gaji_pokok, tb_divisi.uang_makan, tb_kehadiran.alpha
 		FROM tb_karyawan
@@ -62,7 +64,7 @@ class DataGaji extends CI_Controller
 		}
 		$data['c_pot'] = $this->PendataanModel->get_data('tb_potongan_gaji')->result();
 		$data['c_gaji'] = $this->db->query("SELECT tb_karyawan.nik, tb_karyawan.nama_karyawan, tb_karyawan.jenis_kelamin,
-		tb_divisi.nama_divisi, tb_divisi.gaji_pokok, tb_divisi.uang_makan, tb_kehadiran.alpha, tb_kehadiran.id_kehadiran,
+		tb_divisi.nama_divisi, tb_divisi.gaji_pokok, tb_divisi.uang_makan, tb_kehadiran.alpha, tb_kehadiran.id_kehadiran
 		FROM tb_karyawan
 		INNER JOIN tb_kehadiran ON tb_kehadiran.nik=tb_karyawan.nik
 		INNER JOIN tb_divisi ON tb_divisi.nama_divisi=tb_karyawan.divisi

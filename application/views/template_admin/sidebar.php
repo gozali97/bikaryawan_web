@@ -75,7 +75,7 @@
 						<li class="nav-item">
 							<a href="<?= base_url('admin/PotonganGaji') ?>" class="nav-link">
 								<i class="far fa-circle nav-icon"></i>
-								<p>Set Potongan Gaji</p>
+								<p>Data Potongan Gaji</p>
 							</a>
 						</li>
 						<li class="nav-item">

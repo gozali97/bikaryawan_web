@@ -16,8 +16,8 @@
 
 <body>
 	<center>
-		<h1>Bali Indah Photo</h1>
-		<h2>Slip Gaji Karyawan</h2>
+		<h2 style=font-weight:600;color:red>Bali Indah Photo Pangkalan Bun</h2>
+		<h4>Slip Gaji Karyawan</h4>
 		<hr style="width: 50%; border: width 5px; color:black">
 	</center>
 	<?php foreach ($potongan as $p) {
@@ -92,7 +92,7 @@
 					</td>
 
 					<td width="220px">
-						<p>Pangkalan Bun, <?= date("d M Y")  ?> <br> Manager,</p>
+						<p>P.Bun, <?= date("d M Y")  ?> <br> Manager,</p>
 						<br>
 						<br>
 						<p>__________________</p>

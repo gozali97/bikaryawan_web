@@ -16,28 +16,16 @@
 
 <body>
 	<center>
-		<h1>Bali Indah Photo Pangkalan Bun</h1>
-		<h2>Daftar Gaji Pegawai</h2>
+		<h2 style=font-weight:600;color:red>Bali Indah Photo Pangkalan Bun</h2>
+		<h4>Daftar Gaji Pegawai</h4>
 	</center>
 
-	<?php
-	$bulan = $this->input->post('bulan');
-	$tahun = $this->input->post('tahun');
-	$bulantahun = $bulan . $tahun;
-	?>
-
-	<table>
+	<table style="margin-bottom: 6px;">
 		<tr>
-			<td>Bulan</td>
+			<td>Tanggal</td>
 			<td>:</td>
-			<td><?= $bulan ?></td>
+			<td><?= date("d M Y") ?></td>
 		</tr>
-		<tr>
-			<td>Tahun</td>
-			<td>:</td>
-			<td><?= $tahun ?></td>
-		</tr>
-
 	</table>
 
 	<table class="table table-bordered table-hover">
@@ -78,7 +66,7 @@
 		<tr>
 			<td></td>
 			<td width="200px">
-				<p>PangkalanBun, <?= date("d M Y") ?> <br> Pemilik</p>
+				<p>P.Bun, <?= date("d M Y") ?> <br> Pemilik</p>
 				<br>
 				<br>
 				<br>

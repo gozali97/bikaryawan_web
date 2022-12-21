@@ -116,6 +116,7 @@
 									<tbody>
 										<?php foreach ($pot as $p) {
 											$alpha = $p->jml_potongan;
+											echo ($alpha);
 										} ?>
 										<?php $no = 1;
 										foreach ($gaji as $g) : ?>

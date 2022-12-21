@@ -1,5 +1,5 @@
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
+<div class="content-wrapper p-4">
 	<!-- Content Header (Page header) -->
 	<div class="content-header">
 		<div class="container-fluid">
@@ -20,10 +20,15 @@
 	<div class="card">
 		<div class="card-header">
 			<h3 class="card-title">Laporan Data Kegiatan Karyawan</h3>
+			<div class="float-right">
+				<a href="<?= base_url('admin/DataKegiatan/cetak') ?>" type="button" class="btn btn-sm btn-success">
+					<i class="fas fa-print"> Cetak</i>
+				</a>
+			</div>
 		</div>
 		<!-- /.card-header -->
 		<div class="card-body">
-			<table id="example1" class="table table-bordered table-striped">
+			<table id="example2" class="table table-bordered table-striped">
 				<thead>
 					<tr>
 						<th>No</th>

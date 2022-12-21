@@ -53,9 +53,9 @@
 				<p class="mb-1 mt-3">
 					Lupa Password ?<a href="<?php echo base_url('UbahPassword/forgot') ?>">Ubah Password</a>
 				</p>
-				<p class="mb-0">
+				<!-- <p class="mb-0">
 					Belum punya akun? <a href="register.html" class="text-center">Daftar</a>
-				</p>
+				</p> -->
 			</div>
 			<!-- /.card-body -->
 		</div>

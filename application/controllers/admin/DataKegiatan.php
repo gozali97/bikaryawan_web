@@ -83,6 +83,16 @@ class DataKegiatan extends CI_Controller
 		redirect('karyawan/dataKegiatan');
 	}
 
+	public function cetak()
+	{
+		$data['title'] = "Cetak Laporan Kegiatan Karyawan";
+		$data['lap_kegiatan'] = $this->db->query("SELECT tb_kegiatan.*, tb_karyawan.* FROM tb_kegiatan
+		INNER JOIN tb_karyawan ON tb_karyawan.id_karyawan=tb_kegiatan.karyawan_id
+		ORDER BY tb_karyawan.nama_karyawan ASC")->result();
+		$this->load->view('template_admin/header', $data);
+		$this->load->view('admin/cetakKegiatan');
+	}
+
 	public function _rules()
 	{
 		$this->form_validation->set_rules('nama_kegiatan', 'Nama Kegiatan', 'required');
