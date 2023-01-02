@@ -111,7 +111,7 @@
 													<input type="number" name="sakit[]" class="form-control" value="0">
 												</td>
 												<td>
-													<input type="number" name="alpha" class="form-control" value="0">
+													<input type="number" name="alpha[]" class="form-control" value="0">
 												</td>
 											</tr>
 										<?php endforeach; ?>

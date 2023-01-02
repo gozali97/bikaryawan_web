@@ -61,6 +61,7 @@ class DataAbsensi extends CI_Controller
 						'sakit' => $post['sakit'][$key],
 						'alpha' => $post['alpha'][$key],
 					);
+					var_dump($simpan);
 				}
 			}
 			$this->PendataanModel->insert_batch('tb_kehadiran', $simpan);
@@ -70,6 +71,7 @@ class DataAbsensi extends CI_Controller
 		  </div>');
 			redirect('admin/DataAbsensi');
 		}
+
 		$data['title'] = "Tambah Absensi Karyawan";
 		if ((isset($_GET['bulan']) && $_GET['bulan'] != '') && (isset(
 			$_GET['tahun']
@@ -82,6 +84,7 @@ class DataAbsensi extends CI_Controller
 			$tahun = date('Y');
 			$bulantahun = $bulan . $tahun;
 		}
+
 		$data['tambah_kehadiran'] = $this->db->query(
 			"SELECT tb_karyawan.*, tb_divisi.nama_divisi FROM tb_karyawan
 		INNER JOIN tb_divisi ON tb_karyawan.divisi=tb_divisi.nama_divisi
